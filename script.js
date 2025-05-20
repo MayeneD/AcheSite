@@ -176,18 +176,15 @@ document.getElementById("loginForm").addEventListener("submit", async (e) => {
 
     const data = await res.json();
 
-if (res.ok) {
-  document.getElementById("loginSection").style.display = "none";
-  document.getElementById("loginStatus").textContent = `Logado como ${data.tipo}`;
-
-  // Exibir formulário e tabela para qualquer logado
-  document.getElementById("formularioSection").style.display = "block";
-  document.getElementById("tabelaResultado").style.display = "block";
-  document.getElementById("planilhasSection").style.display = "block";
-
-  if (data.tipo === "admin") {
-    document.getElementById("uploadSection").style.display = "block";
+    if (res.ok && data.tipo === "admin") {
+      document.getElementById("loginStatus").textContent = "Logado como admin ✅";
+      document.getElementById("uploadSection").style.display = "block";
+      document.getElementById("loginSection").style.display = "none";
+    } else {
+      document.getElementById("loginStatus").textContent = "Acesso negado.";
+    }
+  } catch (err) {
+    document.getElementById("loginStatus").textContent = "Erro ao tentar login.";
+    console.error(err);
   }
-
-  carregarPlanilhas();
-}
+});

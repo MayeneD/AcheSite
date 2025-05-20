@@ -116,3 +116,56 @@ th, td {
     padding: 1rem;
   }
 }
+
+#loginSection {
+  max-width: 400px;
+  margin: 3rem auto;
+  background: white;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#loginSection h2 {
+  text-align: center;
+  color: #c6007e;
+  margin-bottom: 1.5rem;
+}
+
+#loginForm label {
+  display: block;
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+#loginForm input {
+  width: 100%;
+  padding: 0.5rem;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+#loginForm button {
+  width: 100%;
+  padding: 0.75rem;
+  background-color: #c6007e;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  margin-top: 1rem;
+  transition: background-color 0.3s;
+}
+
+#loginForm button:hover {
+  background-color: #a00065;
+}
+
+#loginStatus {
+  text-align: center;
+  margin-top: 1rem;
+  color: red;
+  font-weight: bold;
+}

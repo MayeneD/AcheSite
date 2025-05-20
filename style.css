@@ -1,0 +1,118 @@
+body {
+  font-family: "Segoe UI", sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #f5f5f5;
+  color: #333;
+}
+
+header {
+  background-color: #c6007e;
+  color: #fff;
+  padding: 1rem 2rem;
+  text-align: center;
+}
+
+main {
+  padding: 2rem;
+  max-width: 900px;
+  margin: auto;
+}
+
+.form-section,
+.result-section {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 10px;
+  margin-bottom: 2rem;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.form-row {
+  margin-bottom: 1rem;
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+
+select,
+input[type="file"],
+button {
+  padding: 0.5rem;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+button {
+  background-color: #c6007e;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #a00065;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+}
+
+table, th, td {
+  border: 1px solid #484848;
+}
+
+th, td {
+  padding: 0.705rem;
+  text-align: left;
+}
+
+.mensagem-vazia {
+  margin-top: 1rem;
+  color: #c6007e;
+  font-weight: bold;
+  font-size: 1rem;
+  text-align: center;
+}
+
+.result-section h3 {
+  margin-top: 2rem;
+  color: #ff0000;
+  font-weight: 600;
+}
+
+#tabelaSempre {
+  margin-top: 1rem;
+  border-top: 2px dashed #4a4747;
+}
+
+
+@media (max-width: 600px) {
+  main {
+    padding: 1rem;
+  }
+
+  .form-row {
+    flex-direction: column;
+  }
+
+  table, th, td {
+    font-size: 0.9rem;
+  }
+
+  header {
+    padding: 1rem;
+    font-size: 1rem;
+  }
+
+  .form-section,
+  .result-section {
+    padding: 1rem;
+  }
+}

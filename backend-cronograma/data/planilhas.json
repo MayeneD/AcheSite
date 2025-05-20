@@ -1,0 +1,18 @@
+[
+  {
+    "id": 1,
+    "nome": "Cronograma Ampolas",
+    "categoria": "Ampolas",
+    "segmento": "Embalagem Primária",
+    "fase": "1. Escopo & Briefing",
+    "arquivo": "ampolas.csv"
+  },
+  {
+    "id": 2,
+    "nome": "Cronograma Blisters",
+    "categoria": "Blisters",
+    "segmento": "Embalagem Secundária",
+    "fase": "2. Pesquisa e Análise",
+    "arquivo": "blisters.csv"
+  }
+]

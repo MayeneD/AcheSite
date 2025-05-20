@@ -159,3 +159,35 @@ function carregarCSVDaAPI(id) {
 document.addEventListener("DOMContentLoaded", () => {
     carregarPlanilhas();
 });
+
+
+document.getElementById("loginForm").addEventListener("submit", async (e) => {
+  e.preventDefault();
+  const username = document.getElementById("username").value;
+  const password = document.getElementById("password").value;
+
+  try {
+    const res = await fetch("http://localhost:3000/api/auth/login", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      credentials: "include",
+      body: JSON.stringify({ username, password })
+    });
+
+    const data = await res.json();
+
+if (res.ok) {
+  document.getElementById("loginSection").style.display = "none";
+  document.getElementById("loginStatus").textContent = `Logado como ${data.tipo}`;
+
+  // Exibir formulário e tabela para qualquer logado
+  document.getElementById("formularioSection").style.display = "block";
+  document.getElementById("tabelaResultado").style.display = "block";
+  document.getElementById("planilhasSection").style.display = "block";
+
+  if (data.tipo === "admin") {
+    document.getElementById("uploadSection").style.display = "block";
+  }
+
+  carregarPlanilhas();
+}

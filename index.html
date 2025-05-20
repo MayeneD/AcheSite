@@ -13,8 +13,33 @@
         <h1> COISAS </h1>
     </header>
 
+
+    <section id="loginSection">
+  <h2>Login</h2>
+  <form id="loginForm">
+    <label>Usuário: <input type="text" id="username" required></label><br>
+    <label>Senha: <input type="password" id="password" required></label><br>
+    <button type="submit">Entrar</button>
+  </form>
+  <p id="loginStatus" style="color: red; font-weight: bold;"></p>
+</section>
+
+<!-- Área de upload só visível após login -->
+<section id="uploadSection" style="display: none;">
+  <h2>Upload de nova planilha (admin)</h2>
+  <form id="uploadForm" enctype="multipart/form-data">
+    <input type="file" name="arquivo" accept=".csv" required><br>
+    <label>Nome: <input type="text" name="nome" required></label><br>
+    <label>Segmento: <input type="text" name="segmento" required></label><br>
+    <label>Categoria: <input type="text" name="categoria" required></label><br>
+    <label>Fase: <input type="text" name="fase" required></label><br>
+    <button type="submit">Enviar</button>
+  </form>
+  <p id="uploadStatus"></p>
+</section>
+
     <main>
-        <section class="form-section">
+        <section id="formularioSection" class="form-section" style="display: none;">
             <h2>Coisas</h2>
             <form id="configForm">
                 <div class="form-row">
@@ -71,13 +96,14 @@
             </form>
         </section>
 
-        <section class="form-section">
+        <section id="planilhasSection" class="form-section" style="display: none;">
             <h2>Planilhas disponíveis</h2>
             <ul id="listaPlanilhas"></ul>
         </section>
 
 
-        <section id="tabelaResultado" class="result-section">
+
+        <section id="tabelaResultado" class="result-section" style="display: none;">
             <h2>Cronograma Selecionado</h2>
 
             <table id="tabelaFiltrada">
